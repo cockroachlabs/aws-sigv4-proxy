@@ -4,6 +4,20 @@ The AWS SigV4 Proxy will sign incoming HTTP requests and forward them to the hos
 
 You can strip out arbirtary headers from the incoming request by using the -s option.
 
+## CRL Specifics
+
+On 2021-05-15, this repo was forked from awslabs copy. The fork was then built
+and pushed to CRL's internal image registry with the following steps.
+
+```
+docker build -t us.gcr.io/cockroach-cloud-images/aws-sigv4-proxy:v1.0.0 .
+docker push us.gcr.io/cockroach-cloud-images/aws-sigv4-proxy:v1.0.0
+```
+
+The repository did not have any tags prior to the fork so, as of this writing,
+all tags are CRL's own. Tags were added for ease of identification and use of
+this image.
+
 ## Getting Started
 
 Build and run the Proxy
